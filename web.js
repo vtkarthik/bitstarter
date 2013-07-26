@@ -4,7 +4,7 @@ app.use(express.logger());
 
 app.get('/', function(request, response) {
   buf = new Buffer(256);
-  fs.readFilSync(this.dir + "/" + index +".html",buf);
+ var out = fs.readFilSync(this.dir + "/" + index +".html",buf);
   response.send(buf.toString());
 });
 
