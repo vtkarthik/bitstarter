@@ -7,8 +7,8 @@ var fs = require('fs');
   buf = new Buffer(256);
 var out = fs.readFileSync('./index.html',buf);
 // console.log(buf.toString());
-//console.log(out);
-response.send(buf.toString());
+//console.log(out.toString());
+response.send(out.toString());
 });
 
 var port = process.env.PORT || 5000;
